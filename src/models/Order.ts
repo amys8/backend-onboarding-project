@@ -1,18 +1,15 @@
 import { Entity, Column, PrimaryColumn, PrimaryGeneratedColumn, CreateDateColumn } from 'typeorm';
 
 @Entity()
-export class Item {
+export class Order {
   @PrimaryGeneratedColumn('uuid')
   uuid: string
 
   @Column()
-  name: string
+  itemId: string
 
   @Column()
-  description: string
-
-  @Column({ type: 'float' })
-  price: number
+  userId: string
 
   @CreateDateColumn()
   createdAt: Date
