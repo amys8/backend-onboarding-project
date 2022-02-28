@@ -31,7 +31,7 @@ We intentionally hid the ORM abstraction layer from you initially. Please make s
 
 A diagram detailing the database structure can be found [here](https://dbdiagram.io/d/61db423ef8370f0a2ee93059).
 
-- [ ] `GET /items` - returns a list of all the items
+- [x] `GET /items` - returns a list of all the items
   - Response
     - an array of objects of the following shape
       - `uuid`: the uuid of the item
@@ -56,7 +56,7 @@ A diagram detailing the database structure can be found [here](https://dbdiagram
   - Response:
     - `uuid`: the newly created order's uuid
     - `createdAt`: the time the order was made
-- [ ] `GET /orders?userId=`: returns all orders for a given user (a list of orders)
+- [x] `GET /orders?userId=`: returns all orders for a given user (a list of orders)
   - this uses **query** params (express has this functionality built in)
     - Input (query param)
       - `userId`: the user id
@@ -67,7 +67,7 @@ A diagram detailing the database structure can be found [here](https://dbdiagram
         - `item`:
           - `name`: the item name
           - `price`: the item price
-- [ ] `GET /orders/:uuid`: returns the information associated with an item. To simplify things, we're not going to ask you to add any auth (though adding auth would be cool!)
+- [x] `GET /orders/:uuid`: returns the information associated with an item. To simplify things, we're not going to ask you to add any auth (though adding auth would be cool!)
   - Input (Body, in json or form data)
     - `user`: the uuid of the current user
   - Response (a singular order)
@@ -85,12 +85,12 @@ A diagram detailing the database structure can be found [here](https://dbdiagram
   - `password`: 
   - Response:
     - `uuid`: the uuid of the user (used as an id for other methods)
-- [ ] `GET /users`: gets all users (we're not worried about security for the scope of this project)
+- [x] `GET /users`: gets all users (we're not worried about security for the scope of this project)
   - Response:
     - an array of objects of the following shape
       - `uuid`: a user's uuid
       - `name`: a user's name
-- [ ] `GET /user/:uuid`: gets information about a user
+- [x] `GET /user/:uuid`: gets information about a user
   - Response:
     - `uuid`: the user's uuid
     - `name`: a user's name
